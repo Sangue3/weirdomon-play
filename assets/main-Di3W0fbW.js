@@ -58,7 +58,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
       <section class="screen loading" role="status" aria-live="polite">
         <h1 class="loading-logo">${G.title}</h1>
         <div class="loading-track" aria-label="${G.loading}"><div class="loading-bar"></div></div>
-      </section>`,this.bar=this.root.querySelector(`.loading-bar`)}setLoadingProgress(e){this.bar&&(this.bar.style.transform=`scaleX(${Math.max(0,Math.min(1,e))})`)}hideLoading(){let e=this.root.querySelector(`.loading`);this.bar=null,e&&(e.classList.add(`leaving`),e.addEventListener(`animationend`,()=>{e.remove()}))}showError(e){let t=e instanceof Error?e.message:String(e);this.root.innerHTML=`
+      </section>`,this.bar=this.root.querySelector(`.loading-bar`)}setLoadingProgress(e){this.bar&&(this.bar.style.transform=`scaleX(${Math.max(0,Math.min(1,e))})`)}hideLoading(){let e=this.root.querySelector(`.loading`);if(this.bar=null,!e)return;e.classList.add(`leaving`);let t=()=>{e.remove()};e.addEventListener(`animationend`,n=>{n.target===e&&t()}),setTimeout(t,600)}showError(e){let t=e instanceof Error?e.message:String(e);this.root.innerHTML=`
       <section class="screen error" role="alert">
         <h1>${G.errorTitle}</h1>
         <p>${G.errorBody}</p>
