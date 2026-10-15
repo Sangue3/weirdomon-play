@@ -1,0 +1,1 @@
+export{i as CanvasRenderer}from"./pixi-BLf63Jup.js";

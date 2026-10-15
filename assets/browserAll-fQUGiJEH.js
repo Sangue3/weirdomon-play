@@ -1,0 +1,1 @@
+import"./pixi-BLf63Jup.js";
